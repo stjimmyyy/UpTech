@@ -1,10 +1,9 @@
-﻿using UpTech.Data.Entities;
-
-namespace UpTech.Data
+﻿namespace UpTech.Data
 {
     using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore;
-
+    
+    using Entities;
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
