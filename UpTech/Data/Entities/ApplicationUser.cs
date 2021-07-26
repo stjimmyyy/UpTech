@@ -1,6 +1,8 @@
 namespace UpTech.Data.Entities
 {
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
 
     using Microsoft.AspNetCore.Identity;
 
@@ -21,6 +23,9 @@ namespace UpTech.Data.Entities
         
         [StringLength(User.PostCodeMaxLength)]
         public string PostCode { get; set; }
+        
+        [ForeignKey("UserId")]
+        public virtual ICollection<UserCategory> UserCategories { get; set; }
         
     }
 }
